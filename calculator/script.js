@@ -11,6 +11,8 @@ calculate.addEventListener('click', function() {
 
   if (isNaN(number1) || isNaN(number2)) {
     result.textContent = "Please enter valid numbers.";
+    result.classList.remove("alert", "alert-success");
+    result.classList.add("alert", "alert-danger");
     return;
   }
 
@@ -27,16 +29,22 @@ calculate.addEventListener('click', function() {
       answer = number1 * number2;
       break;
     case "/":
-      if (number2 === 0) {
+      if (number2 === 0) { 
         result.textContent = "Cannot divide by zero.";
+        result.classList.remove("alert", "alert-success");
+        result.classList.add("alert", "alert-danger");
         return;
       }
       answer = number1 / number2;
       break;
     default:
       result.textContent = "Invalid operation.";
+      result.classList.remove("alert", "alert-success");
+      result.classList.add("alert", "alert-danger");
       return;
   }
 
-  result.textContent = "Result: "+ answer;
+  result.textContent = "Result: " + answer;
+  result.classList.remove("alert", "alert-danger");
+  result.classList.add("alert", "alert-success");
 });

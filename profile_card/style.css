@@ -11,7 +11,7 @@ body {
   
 .card {
     width: 350px;
-    height: 350px;
+    height: 450px;
     background-color: #fff;
     border-radius: 6px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -73,3 +73,32 @@ body {
 }
 
 
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+  }
+  
+  .follow-button,
+  .hire-me-button {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .follow-button {
+    background-color: #ffff; /* Blue for Follow button */
+    color: rgb(0, 0, 0);
+    border: #000000 solid;
+margin-right: 5px;
+  }
+  
+  .hire-me-button {
+    background-color: #000000; /* Green for Hire Me button */
+    color: white;
+    margin-left: 5px;
+  }
+  
